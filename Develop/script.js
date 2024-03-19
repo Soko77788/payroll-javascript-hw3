@@ -19,11 +19,16 @@ const collectEmployees = function() {
       if (lastName === null) {
         break;
       }
-
+//Instructor showed me parsefloat in place of isNaN function here
       let salary = prompt("Enter salary.");
+      
 
-      if (salary === null) {
-        break;
+      if (parseFloat(salary)) {
+        salary = parseFloat(salary)
+
+      }
+      else { 
+        salary = 0
       }
 
       let employee = {
@@ -34,15 +39,12 @@ const collectEmployees = function() {
 
       employees.push(employee);
 
-      let goAgain = prompt("Continue?");
+      console.log(employees)
+      let goAgain = confirm("Continue?");
 
-      if (goAgain === null) {
+      if (!goAgain) {
         break;
       }
-
-      
-
-      console.log(employees)
 }
 }
 
