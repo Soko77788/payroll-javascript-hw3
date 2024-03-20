@@ -80,6 +80,19 @@ const displayAverageSalary = function(employeesArray) {
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
+
+  //Using randomIndex to make it easy because thats what the ai assistant used when I asked the syntax. 
+  let randomIndex = 
+  Math.floor(Math.random() * employeesArray.length);
+
+  //Takes a random index in the employeesArray and makes it a randomEmployee variable
+
+  let randomEmployee = 
+  employeesArray[randomIndex];
+
+  //Just like the average salary function I used dot notation to target just first and last name so i don't get back a salary.
+  
+  console.log(`The randomly selected employee is ${randomEmployee.firstName + randomEmployee.lastName}`)
   // TODO: Select and display a random employee
 }
 
