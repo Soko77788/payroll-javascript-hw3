@@ -58,27 +58,23 @@ return employeesArray
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   
-  console.log(employeesArray);
- 
- 
+  
+  let combinedSalary = 0;
+  
+  //for loop using dot notation to target the salary inputs of the objects. This took me hours to figure out!
+  for (let i = 0; i < employeesArray.length; i++) {
+    let object = employeesArray[i];
+    combinedSalary += object.salary;
+  }
+
+  let averageSalary = parseFloat(combinedSalary) / employeesArray.length;
+
+  console.log(`With our ${employeesArray.length} employees the average salary is $${averageSalary}`)
  
 }
- 
- 
- 
- 
-//   let combinedSalary = 0;
-//   for (let i = 0; i < employeesArray.length; i++) {
-//     combinedSalary += employeesArray[i];
-// }
-
-//   let averageSalary = combinedSalary / employeesArray.length;
-//   return averageSalary;
-
-// }
 
 
-  // console.log(`With our ${employeesArray.length} employees the average salary is ${employeesArray.length}`)
+
   // TODO: Calculate and display the average salary
 
 
