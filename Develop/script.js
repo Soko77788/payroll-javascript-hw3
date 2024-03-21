@@ -92,7 +92,7 @@ const getRandomEmployee = function(employeesArray) {
 
   //Just like the average salary function I used dot notation to target just first and last name so i don't get back a salary.
   
-  console.log(`The randomly selected employee is ${randomEmployee.firstName + randomEmployee.lastName}`)
+  console.log(`The randomly selected employee is ${randomEmployee.firstName + ' ' + randomEmployee.lastName}`)
   // TODO: Select and display a random employee
 }
 
